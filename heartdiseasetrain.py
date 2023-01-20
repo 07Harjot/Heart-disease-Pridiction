@@ -18,7 +18,7 @@ heartdata = pd.read_csv('C:\\Users\\acer\\Desktop\\Heart disease Pridiction\\hea
 x = heartdata.drop(columns='target',axis=1)
 y = heartdata['target']
 
-#print(y)
+print(y)
 
 #spliting data into training and test data
 x_train,x_test,y_train,y_test =train_test_split(x,y,test_size=0.2,stratify=y,random_state=2)
