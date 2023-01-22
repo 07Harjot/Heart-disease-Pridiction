@@ -36,3 +36,21 @@ print('accuracy on training data :',training_data_accuracy)
 X_test_prediction = model.predict(x_test)
 testing_data_accuracy = accuracy_score(X_test_prediction,y_test)
 print('accuracy on training data :',testing_data_accuracy)
+
+#building predictive system
+input_data = (64,1,2,125,309,0,1,131,1,1.8,1,0,3)
+#change the input data to a numpy array
+input_data_as_numpy_array = np.asarray(input_data)
+
+#reshape the numpy array as we are pridiction for only one instance
+
+input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+
+prediction = model.predict(input_data_reshaped)
+#print(prediction)
+if(prediction[0]==0):print('Person does not have heart disease')
+else:print('Person has Heart disease')
+
+
+
+
