@@ -18,7 +18,7 @@ heartdata = pd.read_csv('C:\\Users\\acer\\Desktop\\Heart disease Pridiction\\hea
 x = heartdata.drop(columns='target',axis=1)
 y = heartdata['target']
 
-#print(y)
+print(y)
 
 #spliting data into training and test data
 x_train,x_test,y_train,y_test =train_test_split(x,y,test_size=0.2,stratify=y,random_state=2)
@@ -47,7 +47,7 @@ input_data_as_numpy_array = np.asarray(input_data)
 input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 
 prediction = model.predict(input_data_reshaped)
-#print(prediction)
+print(prediction)
 if(prediction[0]==0):print('Person does not have heart disease')
 else:print('Person has Heart disease')
 
