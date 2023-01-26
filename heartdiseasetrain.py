@@ -22,7 +22,7 @@ print(y)
 
 #spliting data into training and test data
 x_train,x_test,y_train,y_test =train_test_split(x,y,test_size=0.2,stratify=y,random_state=2)
-#print(x.shape,x_train.shape,x_test.shape)
+print(x.shape,x_train.shape,x_test.shape)
 model = LogisticRegression()
 #training
 model.fit(x_train,y_train)
